@@ -58,3 +58,6 @@ The URL above is the **expected GitHub Pages URL after successful publication**,
 ## Notes
 
 This repository should remain independent of the protected development and production source repositories. Do not add backend credentials, wallet provider secrets or active API endpoints to this static demo.
+## Mobile interface cleanup (18 October 2026)
+
+For narrow screens, visitors now arrive directly at a workspace switcher and the interactive phone UI; the large marketing introduction, duplicate stage buttons, and desktop journey remain desktop-only. Registration, home and reset are available in an expandable **More options and guide** section below the demo phone. Agent and main-agent opening screens use short action cards, rather than the oversized repeated marketing panels. Backend and workflow model are unchanged. No video or external embed was added.

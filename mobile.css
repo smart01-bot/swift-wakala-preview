@@ -1,0 +1,66 @@
+
+/* Put the actual product first on small screens. No duplicate marketing hero. */
+.mobile-stage,.mobile-more{display:none}
+.quick-start{background:var(--app-surface);border:1px solid var(--app-border);border-radius:14px;padding:15px 16px;margin:0 0 17px;display:grid;gap:6px}
+.quick-start-label{color:var(--app-secondary);font-size:10px;font-weight:750;letter-spacing:1.3px}
+.quick-start strong{font-size:16px;font-weight:720;letter-spacing:-.3px}
+.quick-start-action{border:none;background:var(--app-cta);color:var(--app-cta-text);font-size:12px;font-weight:700;border-radius:9px;padding:10px 13px;justify-self:start;margin-top:5px}
+.quick-start-action:hover{filter:brightness(.9)}
+@media(max-width:900px){
+  .shell{padding:0 16px}
+  .topbar{height:58px;gap:10px}
+  .studio{display:flex;flex-direction:column;gap:0;margin:0 auto;padding:0 0 45px}
+  .pitch{display:none}
+  .phone-wrap{order:-1;position:static;max-width:540px;width:100%;margin:0 auto}
+  .device-caption{display:none}
+  .mobile-stage{display:flex;align-items:center;gap:14px;padding:13px 1px 12px;justify-content:space-between}
+  .mobile-stage-label{color:#a1a6aa;font-size:12px;font-weight:650;white-space:nowrap}
+  .mobile-role-picker{display:flex;min-width:0;gap:3px;background:#222529;border:1px solid #393e42;padding:3px;border-radius:11px;flex:1;max-width:350px}
+  .mobile-role-picker button{border:0;background:transparent;color:#b3bac0;padding:10px 9px;font-size:12px;font-weight:700;min-width:0;flex:1;border-radius:8px;white-space:nowrap}
+  body[data-role="agent"] .mobile-role-picker [data-role="agent"],body[data-role="main"] .mobile-role-picker [data-role="main"]{background:#f0f1f2;color:#121416}
+  .phone{height:min(780px,calc(100svh - 145px));min-height:485px;border-radius:22px;border-width:4px}
+  .mobile-more{display:block;margin:14px 0 0;border-top:1px solid #34383c;border-bottom:1px solid #34383c;color:#c4c9ce}
+  .mobile-more summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;font-size:12px;font-weight:650;padding:14px 3px}
+  .mobile-more summary::-webkit-details-marker{display:none}
+  .mobile-more summary span{font-size:19px;font-weight:400;line-height:1}
+  .mobile-more[open] summary span{transform:rotate(45deg)}
+  .mobile-more-inner{padding:0 3px 15px}
+  .mobile-more-inner p{font-size:12px;line-height:1.65;color:#929ba1;margin:0 0 14px}
+  .mobile-more-actions{display:flex;gap:8px;flex-wrap:wrap}
+  .mobile-more-actions button{border:1px solid #4b5258;color:#d8dde0;background:#1d2023;border-radius:8px;padding:10px 12px;font-size:12px}
+  .phone-top{padding-top:11px}
+  .statusline{display:none}
+  .inapp-header{padding-bottom:10px}
+  .inapp-brand small{display:none}
+  .screen{padding-top:8px}
+  .screen-head{margin-bottom:13px}
+  .screen-head h2{font-size:24px}
+  .screen-head p{font-size:12px}
+  .kpi-grid{gap:7px;margin-bottom:17px}
+  .kpi{padding:11px 8px}
+  .kpi strong{font-size:21px}
+  .app-nav{padding-bottom:10px}
+}
+@media(max-width:480px){
+  .shell{padding:0 12px}
+  .topbar{height:56px}
+  .brand{gap:8px}
+  .brand-sub{display:none}
+  .brand-mark{height:33px;width:33px;border-radius:10px}
+  .brand-name{font-size:16px}
+  .demo-tag,.top-actions button[data-action="reset"]{display:none!important}
+  .top-actions{gap:0}
+  .top-small{padding:8px 10px;font-size:11px}
+  .studio{padding-top:0}
+  .mobile-stage{padding:10px 0}
+  .mobile-stage-label{font-size:11px}
+  .mobile-role-picker button{padding:9px 6px;font-size:12px}
+  .phone{height:calc(100svh - 126px);min-height:440px;border-radius:18px;border-width:3px}
+  .phone-content{padding-left:16px;padding-right:16px}
+  .phone-top{padding-left:16px;padding-right:16px}
+  .inapp-brand strong{font-size:17px}
+  .quick-start{padding:13px 14px}
+  .quick-start strong{font-size:15px}
+  .kpi span{font-size:9px}
+}
+@media(prefers-reduced-motion:reduce){.mobile-more summary span{transition:none}}
