@@ -90,3 +90,46 @@ body[data-preview="minimal"] .handset-welcome .intro-actions{display:none}
 @media(max-width:430px){body[data-preview="minimal"] .phone-top{padding:12px 20px 0!important}body[data-preview="minimal"] .phone-content{padding:0 20px 28px!important}.native-exchange-hero{padding:22px 20px;min-height:220px}.native-exchange-hero h2{font-size:29px}.native-activity{padding:15px}.native-main-hero{padding:22px}.native-main-hero h2{font-size:30px}body[data-preview="minimal"] .handset-welcome{padding:16px 0 24px}body[data-preview="minimal"] .handset-welcome h2{font-size:41px}}
 @media(max-height:670px){.welcome-logo{min-height:75px}.welcome-logo svg{height:67px;width:90px}body[data-preview="minimal"] .handset-welcome{padding:9px 0 12px}}
 @media(prefers-reduced-motion:reduce){.screen{animation:none!important}}
+
+/* Screen details follow the native source route / amount / review arrangement. */
+.native-request-subtitle{font-size:15px;color:var(--app-secondary);margin:0 0 14px}
+.native-sample-link{padding:0 0 10px;margin-bottom:6px;border:0;background:none;color:var(--app-secondary);font-size:12px;text-decoration:underline;text-underline-offset:3px}
+.native-route-panel{border:1px solid var(--app-border);background:var(--app-glass);border-radius:23px;padding:7px 17px 10px}
+.native-endpoint{border:0}
+.native-endpoint summary{list-style:none;cursor:pointer;display:flex;flex-direction:column;gap:7px;padding:17px 0}
+.native-endpoint summary::-webkit-details-marker{display:none}
+.native-endpoint summary span{font-size:13px;color:var(--app-secondary)}
+.native-endpoint summary strong{font-size:16px;line-height:1.45;font-weight:650;overflow-wrap:anywhere}
+.native-endpoint summary:after{content:"›";position:absolute;right:0;font-size:23px;color:var(--app-secondary)}
+.native-endpoint summary{position:relative;padding-right:23px}
+.native-endpoint[open] summary:after{content:"⌄"}
+.native-endpoint-fields{padding:6px 0 11px}
+.native-route-arrow{text-align:center;border-top:1px solid var(--app-border);border-bottom:1px solid var(--app-border);color:var(--app-secondary);padding:1px 0;font-size:20px}
+.native-amount{margin-top:22px;border-bottom:1px solid var(--app-border);padding-bottom:13px}
+.native-amount>label{font-size:13px;color:var(--app-secondary)}
+.native-amount>div{display:flex;gap:12px;align-items:center;margin-top:11px}
+.native-amount span{font-size:16px;color:var(--app-secondary)}
+.native-amount input{width:100%;border:0;background:transparent;color:var(--app-text);font-size:42px;font-weight:700;min-width:0;outline-offset:3px}
+.native-amount input::placeholder{color:var(--app-secondary);opacity:.45}
+.native-more-options{border-bottom:1px solid var(--app-border);padding:15px 0}
+.native-more-options>summary{font-size:15px;font-weight:600;cursor:pointer}
+.native-more-options label{padding:15px 0 0}
+.native-request-footer{padding:23px 0}
+.native-fee{display:flex;justify-content:space-between;gap:10px;font-size:14px}
+.native-fee span{color:var(--app-secondary)}
+.native-request-footer p{font-size:12px;color:var(--app-secondary);line-height:1.6;margin:12px 0 18px}
+.native-request-footer .btn{min-height:56px;font-size:15px;border-radius:17px}
+.native-history-filter{display:flex;justify-content:space-between;align-items:center;gap:15px;padding:13px 0 20px}
+.native-history-filter span{font-size:14px;color:var(--app-secondary)}
+.native-history-filter select{max-width:190px;min-height:42px;border:1px solid var(--app-border);background:var(--app-surface);color:var(--app-text);border-radius:12px;padding:7px 10px}
+.native-profile-head{display:flex;align-items:center;gap:17px;padding:12px 0 22px}
+.native-avatar{background:var(--app-text);color:var(--app-bg);height:65px;width:65px;border-radius:32px;display:grid;place-items:center;font-size:20px;font-weight:700}
+.native-profile-head h2{font-size:21px;margin-bottom:7px}
+.native-profile-head p{color:var(--app-secondary);font-size:14px}
+.native-profile-number{border-bottom:1px solid var(--app-border);padding:18px 0;display:flex;flex-direction:column;gap:7px}
+.native-profile-number span{color:var(--app-secondary);font-size:13px}
+.native-profile-number strong{font-size:19px}
+.native-profile-group{font-size:11px;color:var(--app-secondary);font-weight:700;letter-spacing:1.3px;margin:29px 0 8px}
+.native-profile-row{width:100%;border:0;border-bottom:1px solid var(--app-border);background:none;display:flex;align-items:center;justify-content:space-between;gap:15px;color:var(--app-text);padding:21px 0;text-align:left;font-size:16px}
+.native-profile-row span:last-child{color:var(--app-secondary)}
+.native-capacity{font-size:12px;color:var(--app-secondary);padding:0 0 14px}
