@@ -74,12 +74,12 @@
     const mine=s.requests.filter(r=>r.agentId==='agent-1');
     const filters=['all','awaiting_review','awaiting_source','completed','rejected','needs_attention'];
     const visible=ui.historyFilter==='all'?mine:mine.filter(r=>r.status===ui.historyFilter);
-    return '<div class="native-history-filter"><span>Your activity</span><select aria-label="Filter history" data-history-select>'+filters.map(f=>'<option value="'+f+'" '+(ui.historyFilter===f?'selected':'')+'>'+esc(f==='all'?'All':M.STATUS[f])+'</option>').join('')+'</select></div>'+
+    return title('History','','')+'<div class="native-history-filter"><span>Your activity</span><select aria-label="Filter history" data-history-select>'+filters.map(f=>'<option value="'+f+'" '+(ui.historyFilter===f?'selected':'')+'>'+esc(f==='all'?'All':M.STATUS[f])+'</option>').join('')+'</select></div>'+
     (visible.map(requestRow).join('')||'<div class="empty">No matching requests</div>');
   }
   function agentNetworks(){return title('Your networks','Account references for this sample agent.','Agent workspace')+`<div class="detail-card">${s.accounts.map((a,i)=>`<div class="account-item">${emblem(a.network)}<div class="row-main"><strong>${esc(a.network)}</strong><small>${esc(a.type)} · ${esc(a.identifier)}</small></div><button class="circle-btn" aria-label="Edit sample account" data-account="${i}">${icon('edit',15)}</button></div>`).join('')}</div><div class="notice">Account edits here only affect this preview. They never update any provider account.</div>`;}
   function agentProfile(){
-    return '<div class="native-profile-head"><div class="native-avatar">AS</div><div><h2>Amina Salehe</h2><p>Upendo Wakala</p></div></div>'+
+    return title('Profile','','')+'<div class="native-profile-head"><div class="native-avatar">AS</div><div><h2>Amina Salehe</h2><p>Upendo Wakala</p></div></div>'+
     '<div class="native-profile-number"><span>Agent number</span><strong>0712000041</strong></div>'+
     '<div class="native-profile-group">ACCOUNT</div>'+
     '<button class="native-profile-row" data-action="personal-info"><span>Personal details</span><span>›</span></button>'+
