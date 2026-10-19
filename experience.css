@@ -1,0 +1,38 @@
+/* Reuse the actual no-auth Swift demonstration as one contained smartphone screen. */
+html,body,#root{height:100%;width:100%;margin:0;overflow:hidden}
+body{background:#060708}
+.shell{max-width:none!important;min-height:0!important;width:100%!important;padding:0!important;margin:0!important}
+.topbar,.pitch,.device-caption,.mobile-stage,.mobile-more{display:none!important}
+.studio{display:block!important;min-height:0!important;width:100%!important;max-width:none!important;padding:0!important;margin:0!important}
+.phone-wrap{max-width:none!important;min-width:0!important;position:static!important;width:100%!important;margin:0!important;padding:0!important}
+.phone{height:100dvh!important;width:100%!important;min-height:0!important;max-height:none!important;border:0!important;border-radius:0!important;box-shadow:none!important}
+.phone-top{padding:15px 17px 0!important}
+.statusline{display:flex!important;padding-bottom:13px}
+.inapp-header{padding-bottom:11px}
+.phone-content{padding:0 16px 24px!important}
+.app-nav{padding:9px 8px 17px!important}
+body[data-screen="splash"] .phone-top,body[data-screen="splash"] .app-nav{display:none!important}
+body[data-screen="splash"] .phone-content{padding:0!important;overflow:hidden}
+body[data-screen="splash"] .screen{padding:0;height:100%;animation:none}
+.splash-screen{height:100%;width:100%;background:var(--app-bg);color:var(--app-text);display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;gap:9px;overflow:hidden}
+.splash-symbol{width:89px;height:89px;background:var(--app-cta);color:var(--app-cta-text);border-radius:22px;display:grid;place-items:center;margin-bottom:15px}
+.splash-symbol svg{width:58px;height:58px}
+.splash-screen strong{font-size:27px;letter-spacing:-1.2px}
+.splash-screen small{font-size:9px;color:var(--app-secondary);font-weight:700;letter-spacing:2.8px}
+.splash-progress{position:absolute;bottom:12%;width:90px;height:3px;border-radius:7px;background:var(--app-border);overflow:hidden}
+.splash-progress i{width:42%;height:100%;background:var(--app-text);display:block;animation:loading 1.4s ease-in-out infinite alternate}
+@keyframes loading{from{transform:translateX(-100%)}to{transform:translateX(280%)}}
+body[data-screen="welcome"] .inapp-header{display:none!important}
+body[data-screen="welcome"] .statusline{padding-bottom:0}
+body[data-screen="welcome"] .phone-content{padding-top:0!important}
+body[data-screen="welcome"] .screen{height:100%;padding:0}
+.handset-welcome{min-height:100%;display:flex;flex-direction:column;justify-content:center;padding:22px 7px 30px}
+.welcome-mark{display:grid;place-items:center;background:var(--app-surface);border:1px solid var(--app-border);border-radius:21px;height:69px;width:69px;margin-bottom:29px}
+.welcome-mark svg{height:45px;width:45px}
+.handset-welcome h2{font-size:31px;line-height:1.11;font-weight:730;letter-spacing:-1.45px;margin:9px 0 14px}
+.handset-welcome>p:not(.screen-kicker){font-size:13px;line-height:1.7;color:var(--app-secondary);margin:0 0 23px}
+.handset-welcome .intro-actions{gap:9px}
+.handset-welcome .intro-actions button{margin:0}
+.handset-note{text-align:center;color:var(--app-secondary);font-size:10px;margin-top:26px}
+@media(max-height:640px){.statusline{padding-bottom:7px}.phone-top{padding-top:9px!important}.handset-welcome{padding:12px 6px}.welcome-mark{margin-bottom:12px}.handset-welcome>p:not(.screen-kicker){margin-bottom:14px}}
+@media(prefers-reduced-motion:reduce){.splash-progress i{animation:none;transform:translateX(80%)}}
