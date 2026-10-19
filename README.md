@@ -76,3 +76,7 @@ For narrow screens, visitors now arrive directly at a workspace switcher and the
 ## Visual palette (19 October 2026)
 
 The dual-phone showcase was rethemed from green to **warm porcelain (`#f4f2f0`), graphite (`#222536`) and cobalt (`#3d51d5`)**. Phone UI accents now use the same cool blue family in their respective dark and light themes; small status colours inside workflow records retain their informational roles. Swipe, splash, independent state, phone size and navigation are unchanged.
+
+## Neutral stage (19 October 2026)
+
+The experimental colour palettes were removed from the public two-phone showcase. The external page is plain white with neutral charcoal type and simple gray lines. No giant decorative S, coloured ambient backdrop, glow or extra shadow. The two embedded app screens use neutral black/white theme variables rather than the cobalt tint; original semantic workflow status badges remain meaningful. Layout, sizing, independent state and swap gestures are unchanged.

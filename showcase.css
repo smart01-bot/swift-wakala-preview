@@ -1,48 +1,48 @@
-/* Swift Wakala dual-phone stage: porcelain, graphite and cobalt. */
-:root{--paper:#f4f2f0;--ink:#222536;--accent:#3d51d5;--line:#d4d5df;color-scheme:light}
+/* Swift Wakala two-phone showcase: neutral white surface and black/grey controls. */
+:root{--paper:#ffffff;--ink:#202020;--accent:#242424;--line:#e1e1e1;color-scheme:light}
 *{box-sizing:border-box}
 body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif;-webkit-font-smoothing:antialiased;min-width:300px}
 a{color:inherit;text-decoration:none}
 button{font:inherit;cursor:pointer}
-button:focus-visible,a:focus-visible,.phone-stage:focus-visible{outline:3px solid #5366e9;outline-offset:5px}
+button:focus-visible,a:focus-visible,.phone-stage:focus-visible{outline:3px solid #474747;outline-offset:5px}
 .skip-link{position:fixed;top:-100px;left:12px;padding:11px 16px;background:var(--accent);color:white;z-index:50}.skip-link:focus{top:10px}
-.showcase{width:min(1120px,calc(100% - 66px));min-height:100svh;margin:auto;display:flex;flex-direction:column}
+.showcase{background:#fff;width:min(1120px,calc(100% - 66px));min-height:100svh;margin:auto;display:flex;flex-direction:column}
 .topline{display:flex;align-items:center;justify-content:space-between;gap:18px;height:73px;border-bottom:1px solid var(--line)}
 .wordmark{font-size:18px;font-weight:800;letter-spacing:-.07em;display:flex;align-items:center;gap:9px;white-space:nowrap}
-.bolt{display:grid;place-items:center;background:#23273d;color:white;border-radius:9px;height:30px;width:30px;font-size:28px}
+.bolt{display:grid;place-items:center;background:#202020;color:white;border-radius:9px;height:30px;width:30px;font-size:28px}
 .subtitle,.eyebrow,.bottomline,.swipe-note,.sticker,.front-note{font-family:"Courier New",Courier,monospace}
-.subtitle{font-size:10px;letter-spacing:.09em;color:#666a7c}
-.back-link{font:12px "Courier New",monospace;border-bottom:1px solid #9297ae;padding:7px 0;white-space:nowrap}
+.subtitle{font-size:10px;letter-spacing:.09em;color:#747474}
+.back-link{font:12px "Courier New",monospace;border-bottom:1px solid #b0b0b0;padding:7px 0;white-space:nowrap}
 .opening{display:flex;align-items:end;justify-content:space-between;gap:40px;padding-top:31px}
-.eyebrow{font-size:10px;letter-spacing:.13em;color:#4d5ed8}
+.eyebrow{font-size:10px;letter-spacing:.13em;color:#696969}
 .opening h1{font-weight:800;font-size:clamp(40px,5vw,62px);letter-spacing:-.085em;line-height:1.02;margin:11px 0 0}
-.opening h1 em{font:italic 1.04em Georgia,serif;letter-spacing:-.075em;color:#4054d4}
-.opening p{font-size:13px;line-height:1.75;color:#63687a;max-width:263px;margin:0 0 4px}
+.opening h1 em{font:italic 1.04em Georgia,serif;letter-spacing:-.075em;color:#242424}
+.opening p{font-size:13px;line-height:1.75;color:#666666;max-width:263px;margin:0 0 4px}
 .phone-stage{position:relative;height:clamp(765px,78svh,850px);min-height:0;margin-top:3px;isolation:isolate;touch-action:pan-y;outline:none}
-.stage-letter{position:absolute;top:45%;left:49%;transform:translate(-50%,-50%);font-size:min(78vw,750px);font-weight:900;letter-spacing:-.15em;line-height:1;pointer-events:none;color:#e4e6f1;user-select:none}
+.stage-letter{display:none;position:absolute;top:45%;left:49%;transform:translate(-50%,-50%);font-size:min(78vw,750px);font-weight:900;letter-spacing:-.15em;line-height:1;pointer-events:none;color:#ffffff;user-select:none}
 .handset{position:absolute;top:49%;left:50%;width:clamp(270px,30vw,350px);aspect-ratio:9/18.7;z-index:1;transition:transform .62s cubic-bezier(.2,1,.3,1),opacity .45s ease,filter .45s ease;will-change:transform;cursor:pointer}
-.device{width:100%;height:100%;background:#1b2022;border:7px solid #22282b;padding:5px;border-radius:39px;overflow:hidden;box-shadow:0 19px 56px #24284d37,0 0 0 1px #4a5551;position:relative}
+.device{width:100%;height:100%;background:#171717;border:7px solid #202020;padding:5px;border-radius:39px;overflow:hidden;box-shadow:none;position:relative}
 .device iframe{width:100%;height:100%;display:block;border:none;border-radius:28px;background:#08090a}
 .earpiece{position:absolute;width:84px;height:15px;background:#171c1d;border-radius:18px;left:50%;top:13px;transform:translateX(-50%);z-index:4;pointer-events:none}
 .earpiece span{display:block;width:7px;height:7px;border-radius:50%;background:#35434a;margin:4px 0 0 63px}
 .home-bar{position:absolute;width:80px;height:4px;border-radius:3px;background:#c4cdca;opacity:.7;bottom:11px;left:50%;transform:translateX(-50%);pointer-events:none}
 .handset.is-front{z-index:3;opacity:1;filter:none;transform:translate(-50%,-50%) translateX(-91px) rotate(-2.6deg)}
-.handset.is-back{z-index:2;opacity:.72;filter:saturate(.75);transform:translate(-50%,-50%) translateX(132px) translateY(-14px) rotate(8deg) scale(.88)}
+.handset.is-back{z-index:2;opacity:.88;filter:none;transform:translate(-50%,-50%) translateX(132px) translateY(-14px) rotate(8deg) scale(.88)}
 .handset.is-back iframe{pointer-events:none}
-.handset.is-back:hover{opacity:.93}
+.handset.is-back:hover{opacity:1}
 .sticker{position:absolute;left:50%;bottom:-26px;transform:translateX(-50%);white-space:nowrap;font-size:10px;letter-spacing:.09em;font-weight:700}
-.swipe-note{position:absolute;left:50%;bottom:2px;transform:translateX(-50%);white-space:nowrap;color:#6f748a;font-size:10px;letter-spacing:.08em}
+.swipe-note{position:absolute;left:50%;bottom:2px;transform:translateX(-50%);white-space:nowrap;color:#777777;font-size:10px;letter-spacing:.08em}
 .selector{display:flex;justify-content:center;align-items:center;gap:11px;padding:7px 0 15px}
-.selector button{background:#e9eaf4;color:#5b5e75;border:1px solid #c9cbdf;border-radius:40px;padding:11px 16px;font-weight:700;font-size:12px;display:flex;gap:9px;align-items:center;white-space:nowrap}
-.selector button[aria-pressed=true]{background:#374dd4;color:#fff;border-color:#374dd4}
-.selector i{width:11px;height:11px;display:block;border-radius:50%;border:1px solid #a4a7bf}
+.selector button{background:#f6f6f6;color:#4e4e4e;border:1px solid #d9d9d9;border-radius:40px;padding:11px 16px;font-weight:700;font-size:12px;display:flex;gap:9px;align-items:center;white-space:nowrap}
+.selector button[aria-pressed=true]{background:#242424;color:#fff;border-color:#242424}
+.selector i{width:11px;height:11px;display:block;border-radius:50%;border:1px solid #a9a9a9}
 .dark-dot{background:#111415}.light-dot{background:white}
 .front-note{font-size:9px;letter-spacing:.04em}
 .selector button[aria-pressed=false] .front-note{display:none}
-.swap{font-size:26px;color:#6b7194}
-.bottomline{border-top:1px solid var(--line);padding:16px 0 19px;display:flex;justify-content:space-between;align-items:center;gap:24px;font-size:11px;color:#727688;margin-top:auto}
+.swap{font-size:26px;color:#777777}
+.bottomline{border-top:1px solid var(--line);padding:16px 0 19px;display:flex;justify-content:space-between;align-items:center;gap:24px;font-size:11px;color:#717171;margin-top:auto}
 .bottomline p{margin:0;line-height:1.6}
-.bottomline button{font-size:11px;border:0;border-bottom:1px solid #969bb2;background:none;color:#3045b8;padding:7px 0;white-space:nowrap}
+.bottomline button{font-size:11px;border:0;border-bottom:1px solid #b1b1b1;background:none;color:#303030;padding:7px 0;white-space:nowrap}
 @media(max-width:750px){
 .showcase{width:calc(100% - 34px)}
 .topline{height:62px}
@@ -75,5 +75,4 @@ button:focus-visible,a:focus-visible,.phone-stage:focus-visible{outline:3px soli
 @media(max-width:355px){.phone-stage{height:calc(162vw + 62px)}.handset{width:78vw}.selector button{padding:9px;font-size:10px}}
 @media(prefers-reduced-motion:reduce){.handset{transition:none!important}}
 
-/* A small cobalt edge links the front handset to the selected theme. */
-.handset.is-front .device{box-shadow:0 20px 60px #25274a30,0 0 0 2px #5c6de54d}
+/* No glows, shadows, colour washes or accent rings around the phones. */
