@@ -72,3 +72,7 @@ This repository should remain independent of the protected development and produ
 ## Mobile interface cleanup (18 October 2026)
 
 For narrow screens, visitors now arrive directly at a workspace switcher and the interactive phone UI; the large marketing introduction, duplicate stage buttons, and desktop journey remain desktop-only. Registration, home and reset are available in an expandable **More options and guide** section below the demo phone. Agent and main-agent opening screens use short action cards, rather than the oversized repeated marketing panels. Backend and workflow model are unchanged. No video or external embed was added.
+
+## Visual palette (19 October 2026)
+
+The dual-phone showcase was rethemed from green to **warm porcelain (`#f4f2f0`), graphite (`#222536`) and cobalt (`#3d51d5`)**. Phone UI accents now use the same cool blue family in their respective dark and light themes; small status colours inside workflow records retain their informational roles. Swipe, splash, independent state, phone size and navigation are unchanged.
