@@ -1,4 +1,15 @@
-# Swift Wakala — Interactive Preview
+# Swift Wakala — Interactive Dual-Phone Preview
+
+The public root now opens a **dual-handset interactive showcase**, not the old landing page. One dark phone and one light phone run separate instances of the original synthetic browser app. Both start at a two-second splash screen, flow into welcome, and let visitors navigate registration, agent, and main-agent workspaces.
+
+Visitors can bring a handset forward by tapping the back phone, using the Dark / Light buttons, dragging horizontally, using left/right arrows on the stage, or swiping horizontally on the foreground handset. The back phone's app state remains intact while the other is in front. Restart Both resets both instances to their own themed splash screens.
+
+Files: `index.html` (public two-phone stage), `showcase.css`, `showcase.js`, `experience.html` (isolated phone demo), `experience.css` (phone viewport), `app.js` and `model.js` (existing synthetic behavior). `showcase.html` is an alternative copy of the two-phone stage.
+
+This is a browser rendition of Swift, **not an Expo native build or real financial service**. No real provider, backend, authentication, PIN or live payment is involved.
+
+---
+
 
 A public, **no-authentication**, interactive portfolio demonstration of Swift Wakala's agent and main-agent workflows. This is a **standalone repository**, not a branch of the production mobile application or of the portfolio.
 
