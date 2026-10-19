@@ -18,16 +18,16 @@ button:focus-visible,a:focus-visible,.phone-stage:focus-visible{outline:3px soli
 .opening h1{font-weight:800;font-size:clamp(40px,5vw,62px);letter-spacing:-.085em;line-height:1.02;margin:11px 0 0}
 .opening h1 em{font:italic 1.04em Georgia,serif;letter-spacing:-.075em;color:#35674f}
 .opening p{font-size:13px;line-height:1.75;color:#617064;max-width:263px;margin:0 0 4px}
-.phone-stage{position:relative;height:min(700px,68svh);min-height:535px;margin-top:3px;isolation:isolate;touch-action:pan-y;outline:none}
+.phone-stage{position:relative;height:clamp(765px,78svh,850px);min-height:0;margin-top:3px;isolation:isolate;touch-action:pan-y;outline:none}
 .stage-letter{position:absolute;top:45%;left:49%;transform:translate(-50%,-50%);font-size:min(78vw,750px);font-weight:900;letter-spacing:-.15em;line-height:1;pointer-events:none;color:#e1e7df;user-select:none}
-.handset{position:absolute;top:49%;left:50%;width:clamp(235px,26vw,310px);aspect-ratio:9/19.5;z-index:1;transition:transform .62s cubic-bezier(.2,1,.3,1),opacity .45s ease,filter .45s ease;will-change:transform;cursor:pointer}
+.handset{position:absolute;top:49%;left:50%;width:clamp(270px,30vw,350px);aspect-ratio:9/18.7;z-index:1;transition:transform .62s cubic-bezier(.2,1,.3,1),opacity .45s ease,filter .45s ease;will-change:transform;cursor:pointer}
 .device{width:100%;height:100%;background:#1b2022;border:7px solid #22282b;padding:5px;border-radius:39px;overflow:hidden;box-shadow:0 19px 56px #192a2338,0 0 0 1px #4a5551;position:relative}
 .device iframe{width:100%;height:100%;display:block;border:none;border-radius:28px;background:#08090a}
 .earpiece{position:absolute;width:84px;height:15px;background:#171c1d;border-radius:18px;left:50%;top:13px;transform:translateX(-50%);z-index:4;pointer-events:none}
 .earpiece span{display:block;width:7px;height:7px;border-radius:50%;background:#35434a;margin:4px 0 0 63px}
 .home-bar{position:absolute;width:80px;height:4px;border-radius:3px;background:#c4cdca;opacity:.7;bottom:11px;left:50%;transform:translateX(-50%);pointer-events:none}
-.handset.is-front{z-index:3;opacity:1;filter:none;transform:translate(-50%,-50%) translateX(-74px) rotate(-3deg)}
-.handset.is-back{z-index:2;opacity:.72;filter:saturate(.75);transform:translate(-50%,-50%) translateX(104px) translateY(-14px) rotate(9deg) scale(.88)}
+.handset.is-front{z-index:3;opacity:1;filter:none;transform:translate(-50%,-50%) translateX(-91px) rotate(-2.6deg)}
+.handset.is-back{z-index:2;opacity:.72;filter:saturate(.75);transform:translate(-50%,-50%) translateX(132px) translateY(-14px) rotate(8deg) scale(.88)}
 .handset.is-back iframe{pointer-events:none}
 .handset.is-back:hover{opacity:.93}
 .sticker{position:absolute;left:50%;bottom:-26px;transform:translateX(-50%);white-space:nowrap;font-size:10px;letter-spacing:.09em;font-weight:700}
@@ -51,18 +51,18 @@ button:focus-visible,a:focus-visible,.phone-stage:focus-visible{outline:3px soli
 .opening{padding-top:24px}
 .opening h1{font-size:clamp(38px,8.5vw,53px)}
 .opening p{display:none}
-.phone-stage{height:min(660px,69svh);min-height:485px;margin-top:9px}
-.handset{width:clamp(219px,61vw,285px)}
-.handset.is-front{transform:translate(-50%,-50%) translateX(-35px) rotate(-3.5deg)}
-.handset.is-back{transform:translate(-50%,-50%) translateX(64px) translateY(-11px) rotate(8deg) scale(.88)}
+.phone-stage{height:calc(133vw + 100px);min-height:630px;max-height:770px;margin-top:9px}
+.handset{width:clamp(260px,70vw,320px)}
+.handset.is-front{transform:translate(-50%,-50%) translateX(-20px) rotate(-2deg)}
+.handset.is-back{transform:translate(-50%,-50%) translateX(53px) translateY(-11px) rotate(7deg) scale(.87)}
 }
 @media(max-width:440px){
 .showcase{width:calc(100% - 28px)}
 .opening h1{font-size:37px}
-.phone-stage{height:575px;min-height:0}
-.handset{width:clamp(207px,66vw,264px)}
-.handset.is-front{transform:translate(-50%,-50%) translateX(-25px) rotate(-3deg)}
-.handset.is-back{transform:translate(-50%,-50%) translateX(59px) translateY(-8px) rotate(8deg) scale(.87)}
+.phone-stage{height:min(745px,calc(162vw + 62px));min-height:0;overflow:clip}
+.handset{width:clamp(238px,78vw,326px)}
+.handset.is-front{transform:translate(-50%,-50%) translateX(-11px) rotate(-1.8deg)}
+.handset.is-back{transform:translate(-50%,-50%) translateX(47px) translateY(-8px) rotate(6deg) scale(.87)}
 .device{border-radius:31px;border-width:6px;padding:4px}
 .device iframe{border-radius:22px}
 .earpiece{top:11px;width:65px;height:12px}.earpiece span{margin:3px 0 0 48px;width:6px;height:6px}
@@ -72,5 +72,5 @@ button:focus-visible,a:focus-visible,.phone-stage:focus-visible{outline:3px soli
 .front-note{display:none!important}
 .bottomline{gap:8px}.bottomline p{max-width:220px;font-size:10px}.bottomline button{font-size:10px}
 }
-@media(max-width:355px){.phone-stage{height:525px}.handset{width:68vw}.selector button{padding:9px;font-size:10px}}
+@media(max-width:355px){.phone-stage{height:calc(162vw + 62px)}.handset{width:78vw}.selector button{padding:9px;font-size:10px}}
 @media(prefers-reduced-motion:reduce){.handset{transition:none!important}}
