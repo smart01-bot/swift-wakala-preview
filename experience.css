@@ -36,3 +36,6 @@ body[data-screen="welcome"] .screen{height:100%;padding:0}
 .handset-note{text-align:center;color:var(--app-secondary);font-size:10px;margin-top:26px}
 @media(max-height:640px){.statusline{padding-bottom:7px}.phone-top{padding-top:9px!important}.handset-welcome{padding:12px 6px}.welcome-mark{margin-bottom:12px}.handset-welcome>p:not(.screen-kicker){margin-bottom:14px}}
 @media(prefers-reduced-motion:reduce){.splash-progress i{animation:none;transform:translateX(80%)}}
+
+/* Showcase phone themes are intentionally fixed; switch phones to switch modes. */
+.header-buttons [data-action="theme"]{display:none!important}
