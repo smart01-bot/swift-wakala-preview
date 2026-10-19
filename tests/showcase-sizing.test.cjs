@@ -1,22 +1,17 @@
-const {test}=require('node:test');
-const assert=require('node:assert/strict');
-const fs=require('node:fs');
-const path=require('node:path');
-const css=fs.readFileSync(path.join(__dirname,'..','showcase.css'),'utf8');
-test('wider handset widths retain reasonable modern phone proportions',()=>{
-  assert.match(css,/width:clamp\(270px,30vw,350px\);aspect-ratio:9\/18\.7/);
-  assert.match(css,/width:clamp\(238px,78vw,326px\)/);
-  assert.match(css,/height:min\(745px,calc\(162vw \+ 62px\)\)/);
+const {test}=require('node:test');const assert=require('node:assert/strict');const fs=require('node:fs');const path=require('node:path');const root=path.join(__dirname,'..');const read=n=>fs.readFileSync(path.join(root,n),'utf8');
+test('desktop keeps the app readable without drawing a fake device',()=>{
+ const css=read('minimal.css');
+ assert.match(css,/max-width:560px!important/);
+ assert.match(css,/margin:auto!important/);
+ assert.doesNotMatch(css,/border:7px solid|box-shadow:0 19px 56px|\.stage-letter/);
 });
-test('stacked phone gestures and accessibility remain enabled',()=>{
-  assert.match(css,/\.handset\.is-front/);
-  assert.match(css,/\.handset\.is-back/);
-  assert.match(css,/prefers-reduced-motion:reduce/);
+test('request, queue and approval screens are retained',()=>{
+ const app=read('app.js');
+ for(const name of ['function agentRequest','function agentHistory','function mainQueue','function mainApprovals','function onboarding'])assert.ok(app.includes(name),name);
 });
-test('typical mobile viewports fit enlarged handsets vertically',()=>{
-  for(const width of [320,360,390,414,440]){
-    const phoneWidth=width<=355?width*.78:Math.max(238,Math.min(width*.78,326));
-    const stageHeight=Math.min(745,width*1.62+62);
-    assert.ok(stageHeight-phoneWidth*18.7/9>=35,'screen fits at '+width+'px');
-  }
+test('browser preview does not send real wallet transfers',()=>{
+ const html=read('index.html'),js=read('app.js');
+ assert.doesNotMatch(html,/<form|<iframe|\.mp4/);
+ assert.match(js,/M\.submitRequest/);
+ assert.match(js,/Simulated workflow/);
 });
